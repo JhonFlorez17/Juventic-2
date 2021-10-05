@@ -1,0 +1,78 @@
+/*------------------------------------------------------------------
+    IMPORT FONTS
+-------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900');
+
+/*------------------------------------------------------------------
+    IMPORT FILES
+-------------------------------------------------------------------*/
+
+@import url(animate.css);
+@import url(font-awesome.min.css);
+@import url(superslides.css);
+@import url(baguetteBox.min.css);
+@import url(baguetteBox.min.css);
+
+
+/*------------------------------------------------------------------
+    About
+-------------------------------------------------------------------*/
+
+.about-section-box{
+	padding: 70px 0px;
+	background: #ffffff url(../images/about-bg.jpg) no-repeat bottom center;
+	background-size: cover;
+}
+.about-section-box .img-fluid{
+	box-shadow: 20px 20px 0px #d65106;
+}
+.inner-column{
+	text-align: left;
+}
+.inner-column h1{
+	font-family: 'Rubik', sans-serif;
+	font-size: 30px;
+	color: #010101;
+	font-weight: 500;
+}
+
+.inner-column2 h1{
+    text-align: right;
+}
+
+.inner-pt h1 span {
+    color: #d65106;
+}
+
+.inner-pt {
+    margin-top: 30px;
+	text-align: right;
+}
+
+.col-lg-6 {
+    max-width: 100%;
+}
+
+.inner-column h1 span{
+	color: #d65106;
+}
+
+.inner-column h1 span{
+	color: #d65106;
+}
+
+.inner-column h4{
+	font-size: 16px;
+	font-weight: 500;
+}
+.inner-column p{
+	font-size: 18px;
+	color: #222222;
+}
+.inner-column .btn-outline-new-white{
+	color: #fff;
+}
+.inner-column .btn-outline-new-white:hover{
+	color: #ffffff;
+}

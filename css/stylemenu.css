@@ -1,0 +1,355 @@
+
+
+/*Contenedor de menu*/
+.containerom{
+    width: 98%;
+    margin-top: -58px;
+}
+
+/*******************************/
+/********* MENU CSS *********/
+/*******************************/
+
+.menu {
+    position: relative;
+    padding: 45px 0 15px 0;
+}
+
+.menu .menu-tab {
+    position: relative;
+}
+
+.menu .menu-tab img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.menu .menu-tab .nav.nav-pills .nav-link {
+    color: #ffffff;
+    background: #fbaf32;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.menu .menu-tab .nav.nav-pills .nav-link:hover,
+.menu .menu-tab .nav.nav-pills .nav-link.active {
+    color: #ffffff;
+    background: #719a0a;
+}
+
+.menu .menu-tab .tab-content {
+    padding: 30px 0 0 0;
+    background: transparent;
+}
+
+.menu .menu-tab .tab-content .container {
+    padding: 0;
+}
+
+.menu .menu-item {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.menu .menu-img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.menu .menu-img img {
+    width: 100%;
+    border-radius: 100px;
+}
+
+.menu .menu-text {
+    width: calc(100% - 100px);
+}
+
+.menu .menu-text h3 {
+    position: relative;
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.menu .menu-text h3::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 13px;
+    left: 0;
+    border-top: 2px dotted #cccccc;
+    z-index: -1;
+}
+
+.menu .menu-text h3 span {
+    display: inline-block;
+    float: left;
+    padding-right: 5px;
+    background: #ffffff;
+}
+
+.menu .menu-text h3 strong {
+    display: inline-block;
+    float: right;
+    padding-left: 5px;
+    color: #fbaf32;
+    background: #ffffff;
+}
+
+.menu .menu-text p {
+    position: relative;
+    margin: 5px 0 0 0;
+    float: left;
+    display: block;
+}
+
+@media(max-width: 575.98px) {
+    .menu .menu-text p,
+    .menu .menu-text h3,
+    .menu .menu-text h3 span,
+    .menu .menu-text h3 strong {
+        display: block;
+        float: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menu .menu-text h3 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    
+    .menu .menu-text h3 span {
+        margin-bottom: 3px;
+    }
+    
+    .menu .menu-text h3::after {
+        display: none;
+    }
+}
+
+
+.descargarMenu:hover{
+    background: red;
+}
+
+
+/*Personalizacion en el menu*/
+
+#botonContact{
+    margin-left: 141px;
+    margin-top: -70px;
+    color: white;
+    height: 32%;
+    padding: 6px;
+    border-radius: 17px;
+    background-color: #FDB700;
+ 
+}
+
+
+#botonContact:hover{
+    background: #D65106;
+}
+
+
+
+#v-pills-pdf-tab{
+    background: #810F1A;
+    text-align: center;
+    margin-top: 25px;
+    color:white;
+    
+}
+#descargaMenu{
+    width: 20%;
+    margin-top: -2px;
+    margin-left: -9px;
+
+}
+
+
+
+#v-pills-descargapdf-tab{
+    background: #8D1701;
+    text-align: center;
+    margin-top: 25px;
+    width: 57%;
+    height: 54px;
+    color: white;
+    margin-left: 6px;
+    margin-left: 67px;
+    border-radius: 15px;
+}
+
+#v-pills-descargapdf-tab:hover{
+    background: #FF0000;
+    color: white;
+}
+
+.miboton{
+    background-color: #D65106;
+    text-align: center;
+    padding: 1px;
+    height: 27px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 18px;
+}
+.miboton:hover{
+    background: #76AF63;
+}
+#v-pills-pdf-tab:hover{
+    background: red;
+}
+
+.todo, .bebida, .almuerzo, .comida {
+    color:black;
+
+}
+/*Fin de personalizacion*/
+
+
+
+/*Contenedor Datos css*/
+
+.contenedorDatos{
+    width: 40%;
+    margin-left: 1px;
+    background: #E6E6E6;
+    color: #E75B1E;
+    padding: 16px;
+}
+
+.imagenProducto{
+    width: 189%;
+    margin-left: 408px;
+    margin-top: -864px;
+}
+
+.contenidoImagen{
+    margin-left: 700px;
+    margin-top: -263px;
+    color: black;
+}
+.h6contenido{
+    margin-left: -240px;
+    margin-right: -368px;
+    font-size: 18px;
+    margin-top: 38px;
+    font-family: monospace;
+    color: black;
+}
+
+  .botonPago{
+      background: #D65106;
+      border-radius:29px;
+      color:white;
+  }
+
+  .botonPago:hover{
+      background: #19A15F;
+      color:white;
+  }
+
+  
+.inputP{
+    background: #E6E6E6;
+    border-bottom:1px solid black;
+    border-radius:10px;
+}
+
+
+.modalHeader{
+    background: black;
+    border-bottom:4px solid #D65106;
+    border-top: 4px solid white;
+}
+
+
+.modalFooter{
+    background: black;
+    border-bottom:4px solid white;
+    border-top: 4px solid #D65106;
+}
+
+h2.modalTitulo {
+    color: white;
+    margin-left: 454px;
+}
+
+button.btn-close{
+    background: white;
+}
+
+.bcSnack{
+    background: white;
+}
+
+
+
+h2.tituloDatos {
+    text-align: center;
+    background: #D65106;
+    width: 85%;
+    margin-left: 29px;
+    margin-top: -11px;
+    padding: 6px;
+    color: white;
+    border-radius: 14px;
+    
+}
+.modal-content{
+    background: #FFFFFF;
+}
+
+
+
+form#menuForm {
+    padding: 31px;
+}
+
+
+.imagenProductoSnack{
+    margin-left: 408px;
+    margin-top: -767px;
+}
+
+.h6contenidoSnack {
+    margin-left: -365px;
+    margin-right: 2px;
+    font-size: 18px;
+    margin-top: 38px;
+    font-family: monospace;
+    color: black;
+}
+
+
+.TituloDescripcionSnack{
+    margin-left: -240px;
+    margin-top: 28px;
+}
+
+
+
+h2.modalTituloSnack {
+    color: white;
+    margin-left: 308px;
+    margin-top: 12px;
+}
+
+.modalHeaderSnack{
+    background: black;
+    border-bottom:4px solid #D65106;
+    border-top: 4px solid white;
+}
+
+
+span.textoSnack:hover{
+    color: #E75B1E;
+}
+

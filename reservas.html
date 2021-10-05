@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Site Metas -->
+	<title>Reservas en linea</title>
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+	<link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+	
+	<!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">    
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	  
+    <!-- Site CSS -->
+	  <link rel="stylesheet" href="css/style.css">   
+	  <link rel="stylesheet" href="css/stylemenu.css">
+
+    <!-- Responsive CSS -->
+	  <link rel="stylesheet" href="css/responsive.css">
+	  
+    <!-- Custom CSS -->
+	  <link rel="stylesheet" href="css/custom.css">
+    
+    <!--Api Reservas-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js\reservas.js" type="text/javascript"></script>
+    
+  </head>
+  <body>
+		<!-- Start header -->
+		<header class="top-navbar">
+			<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container">
+					<a class="navbar-brand" href="index.html">
+						<img src="images/logo-index.png" alt="" />
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food"
+						aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbars-rs-food">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item "><a class="nav-link" href="index.html">Inicio</a></li>
+							<li class="nav-item "><a class="nav-link" href="menu.html">Menú</a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">Quienes somos</a></li>
+							<li class="nav-item"><a class="nav-link" href="blog.html">Servicios</a></li>
+							<li class="nav-item active"><a class="nav-link" href="reservas.html">Reservas</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contáctanos</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+	<!-- End header -->
+
+	<!-- Start All Pages -->
+	<div class="all-page-title page-breadcrumb-two">
+		<div class="container text-center">
+		<div class="row">
+			<div class="col-lg-12">
+			<h1>Reservas en linea</h1>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- End All Pages -->	
+
+		<!-- Start reservas -->
+
+		<div class="contact-box">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="heading-title text-center">
+							<h2>Reserva nuestros servicios</h2>
+							<p>¡Reserva cualquiera de nuestros servicios en tan solo segundos!</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<form id="formulario">
+
+							<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<select class="custom-select d-block form-control" onclick="clickEvento(this)" id="evento" name ="evento" required data-error="Por favor selecciona el servicio que deseas">
+											<option disabled selected>Seleciona el servicio*</option>
+											<option value="Celebración de cumpleaños">Celebración de cumpleaños</option>
+											<option value="Aniversarios">Aniversarios</option>
+											<option value="Fiestas infantiles">Fiestas infantiles</option>
+											<option value="Declaraciones o propuestas">Declaraciones o propuestas</option>
+											<option value="Despedidas">Despedidas</option>
+											<option value="Cena con amigos">Cena con amigos</option>
+											</select>
+											<div class="help-block with-errors"></div>
+										</div> 
+									</div>
+
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="date" class="form-control" onblur="clickFecha(this)" id="fecha" name="fecha"  required data-error="Escoja una fecha">
+									<div class="help-block with-errors"></div>
+								</div>                                 
+							</div>
+
+							<div class="col-md-12"> 
+								<div class="form-group">
+									<input type="time" class="form-control" onblur="clickHora(this)" id="hora" name="hora">
+									<p>Horario de atención: 04:00 pm a 10:30 pm</p>
+									<div class="help-block with-errors"></div>
+								</div>                                 
+							</div>
+
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="number" class="form-control" onblur="clickPersonas(this)" id="numPersonas" name="numpersonas" placeholder="Número de personas" required data-error="INVÁLIDO. Solo se aceptan números">
+									<div class="help-block with-errors"></div>
+								</div>                                 
+							</div>
+
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="nombreCliente" name="nombreCliente" placeholder="Nombre completo" minlength="10" maxlength="50" pattern="[A-Za-z ]+" required data-error="INVÁLIDO. Por favor escribe tu nombre correctamente">
+									<div class="help-block with-errors"></div>
+								</div>                                 
+							</div>
+
+								<div class="col-md-12">
+									<div class="form-group">
+										<input type="email" placeholder="Correo electrónico" id="correoCliente" name="correoCliente" class="form-control"  minlength="14" maxlength="64" required data-error="INVÁLIDO. Por favor escribe tu correo electrónico correctamente">
+										<div class="help-block with-errors"></div>
+									</div> 
+								</div>
+
+				<div class="col-md-12">
+									<div class="form-group">
+										<input type="number" class="form-control" id="celularCliente" name="celularCliente" placeholder="Teléfono" minlength="7" maxlength="10" required data-error="INVÁLIDO. Solo se aceptan números">
+										<div class="help-block with-errors"></div>
+									</div>                                 
+								</div>
+
+								<div class="col-md-12">
+									<div class="form-group"> 
+										<input class="form-control" onblur="clickSolicitud(this)" id="solicitudCliente" name="solicitudCliente" placeholder="Solicitudes adicionales" rows="4" minlength="60" maxlength="500"  required data-error="Por favor escribe tus solicitudes adicionales" >
+										<div class="help-block with-errors"></div>
+									</div>
+								
+								<div class="submit-button text-center">
+									<button type="submit" id="buttonID" class="btn btn-common" > RESERVAR </button>
+									<div id="msgSubmit" class="h3 text-center hidden"></div> 
+								<div class="clearfix"></div> 
+								</div>
+								</div>
+							</div>            
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End reservas -->
+  </body>
+</html>

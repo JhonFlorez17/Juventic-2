@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Site Metas -->
+	<title>Menu</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Site Icons -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+	<!-- Site CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/stylemenu.css">
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo-index.png" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food"
+					aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-rs-food">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item "><a class="nav-link" href="index.html">Inicio</a></li>
+						<li class="nav-item active"><a class="nav-link" href="menu.html">Menú</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">Quienes somos</a></li>
+						<li class="nav-item"><a class="nav-link" href="blog.html">servicios</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Contáctanos</a></li>
+						<li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+						<!-- 						<li class="nav-item logo">
+							<a href="carrito.html">
+								<img src="images/shopping-cart_icon-icons.com_72552.svg" alt="">
+							<span class="number-cart" id="number-cart">0</span>
+							</a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+
+	<!-- Start All Pages -->
+	<div class="all-page-title page-breadcrumb-two">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Menú Especial</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End All Pages -->
+
+	<!-- Start Menu -->
+	<div class="menu-box">
+		<div class="container">
+			<div class="row inner-menu-box">
+				<div class="col-3">
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active todo" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+							aria-controls="v-pills-home" aria-selected="true">Lo más vendido</a>
+						<a class="nav-link bebida" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+							aria-controls="v-pills-profile" aria-selected="false">Bebidas</a>
+						<a class="nav-link almuerzo" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+							role="tab" aria-controls="v-pills-messages" aria-selected="false">Ensaladas</a>
+						<a class="nav-link comida" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+							aria-controls="v-pills-settings" aria-selected="false">Comida</a>
+					</div>
+				</div>
+
+				<div class="col-9">
+					<div class="tab-content" id="v-pills-tabContent">
+						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+							<div class="row" id="productos">
+								<div class="heading-title text-center">
+									<h2>Menú Especial</h2>
+									<p>Bienvenido a la sección de lo más vendido actualmente</p>
+								</div>
+
+								<template id="template-card">
+									<div class="col-lg-4 col-md-6 special-grid drinks">
+										<div class="gallery-single fix">
+											<img class="img-fluid" alt="Image">
+											<div class="why-text">
+												<h5 class="miboton" data-bs-target="#reg-modal"></h5>
+												<p></p>
+												<h5 id="precio"></h5>
+											</div>
+										</div>
+									</div>
+								</template>
+
+							</div>
+						</div>
+
+						<!--Seccion bebidas-->
+						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							<!-- Menu Start DRINKS -->
+							<div class="menu">
+								<div class="container containerom">
+									<div class="menu-tab">
+										<div class="row">
+											<div class="heading-title text-center">
+												<h2>BEBIDAS</h2>
+												<p>Bienvenido a la sección de bebidas</p>
+											</div>
+
+											<div class="col-lg-7 col-md-12">
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Standard black coffee</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Caramel Macchiato</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Single Cup Brew</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Standard black coffee</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Caramel Macchiato</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Single Cup Brew</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Standard black coffee</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Caramel Macchiato</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Single Cup Brew</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Caramel Macchiato</span> <strong>$12.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Single Cup Brew</span> <strong>$12.00</strong>
+														</h3>
+
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-beverage.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Standard black coffee</span> <strong>$12.00</strong>
+														</h3>
+
+														<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+															aria-labelledby="myLargeModalLabel" aria-hidden="true">
+															<div class="modal-dialog modal-lg">
+																<div class="modal-content">
+																	<div class="modal-header modalHeaderSnack">
+																		<h2 class="modalTituloSnack" id="exampleModalLabel">Comida Especial 1</h2>
+																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																			<span aria-hidden="true">&times;</span>
+																		</button>
+																	</div>
+																	<div class="modal-body contenedorDatos">
+																		<h2 class="tituloDatos">Datos de Pago</h2>
+																		<form id="menuForm">
+																			<label for="modal" class="from-label">Nombre</label>
+																			<input type="text" id="nombre" class="form-control inputP" required
+																				data-error="Llena el campo" placeholder="Pepito ">
+																			<label for="modal" class="from-label">Apellido</label>
+																			<input type="text" id="apellido" class="form-control inputP" required
+																				data-error="Llena el campo" placeholder="Perez">
+																			<label for="modal" class="from-label">C.C</label>
+																			<input type="number" id="cedula" class="form-control inputP" required
+																				data-error="Llena el campo" placeholder="1023982138 ">
+																			<label for="modal" class="from-label">Email</label>
+																			<input type="text" id="email" class="form-control inputP" required
+																				data-error="Llena el campo" placeholder="example@mail.com"><br>
+																			<button class="form-control botonPago" id="modal-pago"
+																				type="submit">Pagar</button>
+
+																			<div>
+																				<div class="submit-button text-center">
+																					<div id="msgSubmit" class="h3 text-center hidden"></div>
+																					<div class="clearfix"></div>
+																				</div>
+																				<img class="imagenProductoSnack" src="images2/menu-beverage-img.jpg"
+																					alt="Image">
+																				<div class="contenidoImagen">
+																					<h2 class="TituloDescripcionSnack">Descripción</h2>
+																					<h6 class="h6contenidoSnack">
+																						Lorem Ipsum es simplemente el texto de relleno de las imprentas
+																						y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar
+																						de las industrias desde el año 1500, cuando un impresor
+																						(N. del T. persona que se dedica a la imprenta)
+																					</h6>
+																				</div>
+																			</div>
+																		</form>
+																	</div>
+
+																	<div class="modal-footer modalFooter">
+																		<button id="botonContact" class="btn btn-warning"
+																			onclick="window.location='contact.html'" type="button">CONTACTO </button>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-5 d-none d-lg-block">
+												<img src="images2/menu-beverage-img.jpg" alt="Image">
+												<a class="nav-link" download="Menu.jpg" id="v-pills-descargapdf-tab"
+													href="images2/MenuDescarga.jpg" title="Descarga Menu">
+													Descargar Menu
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Menu End -->
+						</div>
+
+
+						<!--Seccion Almuerzos-->
+						<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<!-- Menu Start SNACKS -->
+							<div class="menu">
+								<div class="container containerom">
+									<div class="menu-tab">
+										<div class="row">
+											<div class="heading-title text-center">
+												<h2>ENSALADAS</h2>
+												<p>Bienvenido a la sección de ensaladas</p>
+											</div>
+											<div class="col-lg-7 col-md-12">
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Corn Tikki - Spicy fried Aloo</span> <strong>$15.00</strong>
+														</h3>
+
+														<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+															aria-labelledby="myLargeModalLabel" aria-hidden="true">
+															<div class="modal-dialog modal-lg">
+																<div class="modal-content">
+																	<div class="modal-header modalHeaderSnack">
+																		<h2 class="modalTituloSnack" id="exampleModalLabel">Comida Especial 1</h2>
+																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																			<span aria-hidden="true">&times;</span>
+																		</button>
+																	</div>
+																	<div class="modal-body contenedorDatos">
+																		<h2 class="tituloDatos">Datos de Pago</h2>
+																		<form id="menuForm">
+																			<label for="modal" class="from-label">Nombre</label>
+																			<input type="text" id="nombre" class="form-control inputP" required
+																				data-error="Llena el campo" placeholder="Pepito ">
+																			<label for="modal" class="from-label">Apellido</label>
+																			<input type="text" id="apellido" class="form-control inputP" required
+																				data-error="Llena el campo" placeholder="Perez">
+																			<label for="modal" class="from-label">C.C</label>
+																			<input type="number" id="cedula" class="form-control inputP" required
+																				data-error="Llena el campo" placeholder="1023982138 ">
+																			<label for="modal" class="from-label">Email</label>
+																			<input type="text" id="email" class="form-control inputP" required
+																				data-error="Llena el campo" placeholder="example@mail.com"><br>
+																			<button class="form-control botonPago" id="modal-pago"
+																				type="submit">Pagar</button>
+
+																			<div>
+																				<div class="submit-button text-center">
+																					<div id="msgSubmit" class="h3 text-center hidden"></div>
+																					<div class="clearfix"></div>
+																				</div>
+																				<img class="imagenProductoSnack" src="images2/menu-snack-img.jpg" alt="Image">
+																				<div class="contenidoImagen">
+																					<h2 class="TituloDescripcionSnack">Descripción</h2>
+																					<h6 class="h6contenidoSnack">
+																						Lorem Ipsum es simplemente el texto de relleno de las imprentas
+																						y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar
+																						de las industrias desde el año 1500, cuando un impresor
+																						(N. del T. persona que se dedica a la imprenta)
+																					</h6>
+																				</div>
+																			</div>
+																		</form>
+																	</div>
+
+																	<div class="modal-footer modalFooter">
+																		<button id="botonContact" class="btn btn-warning"
+																			onclick="window.location='contact.html'" type="button">CONTACTO </button>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+
+													</div>
+												</div>
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Corn Tikki - Spicy fried Aloo</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Bread besan Toast</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Tandoori Soya Chunks</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Corn Tikki - Spicy fried Aloo</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Bread besan Toast</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Tandoori Soya Chunks</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Corn Tikki - Spicy fried Aloo</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Bread besan Toast</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Tandoori Soya Chunks</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Corn Tikki - Spicy fried Aloo</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+												<div class="menu-item">
+													<div class="menu-img">
+														<img src="images2/menu-snack.jpg" alt="Image">
+													</div>
+													<div class="menu-text">
+														<h3 class="h3m" data-toggle="modal" data-target=".bd-example-modal-lg">
+															<span class="textoSnack">Bread besan Toast</span> <strong>$15.00</strong>
+														</h3>
+														<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-5 d-none d-lg-block">
+												<img src="images2/menu-snack-img.jpg" alt="Image">
+												<a class="nav-link" download="Menu.jpg" id="v-pills-descargapdf-tab"
+													href="images2/MenuDescarga.jpg" title="Descarga Menu">
+													Descargar menu
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Menu End -->
+						</div>
+
+						<!--Seccion Cenas-->
+						<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							<!-- Menu Start Burger -->
+							<div class="menu">
+								<div class="container containerom">
+
+									<div class="menu-tab">
+										<div class="heading-title text-center">
+											<h2>Comidas</h2>
+											<p>Bienvenido a la sección de comidas rápidas</p>
+										</div>
+										<ul class="nav nav-pills justify-content-center">
+											<li class="nav-item">
+												<a class="nav-link active" data-toggle="pill" href="#burgers">Burgers</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="pill" href="#hotdog">Hot Dog</a>
+											</li>
+
+											<li class="nav-item">
+												<a class="nav-link" data-toggle="pill" href="#pizzas">Pizzas</a>
+											</li>
+
+
+										</ul>
+										<div class="tab-content">
+											<div id="burgers" class="container tab-pane active">
+												<div class="row">
+
+													<div class="col-lg-7 col-md-12">
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-burger.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Pulled porx Burger</span> <strong>$13.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+
+
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-burger.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Bacon, EGG and Cheese</span> <strong>$13.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-burger.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Fried chicken Burger</span> <strong>$13.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-burger.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Pulled porx Burger</span> <strong>$18.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-burger.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Fried chicken Burger</span> <strong>$22.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-5 d-none d-lg-block">
+														<img src="images2/menu-burger-img.jpg" alt="Image">
+														<a class="nav-link" download="Menu.jpg" id="v-pills-descargapdf-tab"
+															href="images2/MenuDescarga.jpg" title="Descarga Menu">
+															Descargar Menu
+														</a>
+													</div>
+												</div>
+											</div>
+											<div id="hotdog" class="container tab-pane fade">
+												<div class="row">
+													<div class="col-lg-7 col-md-12">
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-hotdog.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Corn Tikki - Spicy fried Aloo</span> <strong>$15.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-hotdog.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Bread besan Toast</span> <strong>$35.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-hotdog.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Healthy soya nugget snacks</span> <strong>$20.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-hotdog.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Tandoori Soya Chunks</span> <strong>$30.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-hotdog.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Tandoori Soya Chunks</span> <strong>$30.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+
+
+													</div>
+													<div class="col-lg-5 d-none d-lg-block">
+														<img src="images2/menu-hotdog-img.jpg" alt="Image">
+														<a class="nav-link" download="Menu.jpg" id="v-pills-descargapdf-tab"
+															href="images2/MenuDescarga.jpg" title="Descarga Menu">
+															Descargar Menu
+														</a>
+													</div>
+												</div>
+											</div>
+
+											<div id="pizzas" class="container tab-pane fade">
+												<div class="row">
+													<div class="col-lg-7 col-md-12">
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-pizza.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Corn Tikki - Spicy fried Aloo</span> <strong>$15.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-pizza.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Bread besan Toast</span> <strong>$35.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-pizza.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Healthy soya nugget snacks</span> <strong>$20.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-pizza.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Tandoori Soya Chunks</span> <strong>$30.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+
+														<div class="menu-item">
+															<div class="menu-img">
+																<img src="images2/menu-pizza.jpg" alt="Image">
+															</div>
+															<div class="menu-text">
+																<h3 class="h3m"><span>Tandoori Soya Chunks</span> <strong>$30.00</strong></h3>
+																<p>Lorem ipsum dolor sit amet elit. Phasel nec preti facil</p>
+															</div>
+														</div>
+
+
+													</div>
+													<div class="col-lg-5 d-none d-lg-block">
+														<img src="images2/menu-pizza-img.jpg" alt="Image">
+														<a class="nav-link" download="Menu.jpg" id="v-pills-descargapdf-tab"
+															href="images2/MenuDescarga.jpg" title="Descarga Menu">
+															Descargar Menu
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Menu End -->
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Menu -->
+
+
+
+
+
+
+
+
+
+	<!-- Start QT -->
+	<div class="qt-box qt-background">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 ml-auto mr-auto text-center">
+					<p class="lead ">
+						" Las mejores hamburguesas solo las encuentras cuando las deleitas "
+					</p>
+					<span class="lead">Fast ood Delicious</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End QT -->
+
+	<!-- Start Customer Reviews -->
+	<div class="customer-reviews-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Valoración de los clientes</h2>
+						<p>Testimonios de algunos clientes acerca de nuestros productos y servicios</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 mr-auto ml-auto text-center">
+					<div id="reviews" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner mt-4">
+							<div class="carousel-item text-center active">
+								<div class="img-box m-auto">
+									<img class="d-block w-100 rounded-circle" src="images/cliente1.jpg">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Carlos Pérez</strong></h5>
+								<h6 class="text-dark m-0">Ingeniero de sistemas</h6>
+								<p class="m-0 pt-3">Las hamburguesas me encantaron, desde que las probé solo pienso cuando me iré a
+									comer otra.</p>
+							</div>
+							<div class="carousel-item text-center">
+								<div class="img-box m-auto">
+									<img class="d-block w-100 rounded-circle" src="images/cliente2.jpg">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Ana Peralta</strong></h5>
+								<h6 class="text-dark m-0">Ama de casa</h6>
+								<p class="m-0 pt-3">Llenó mis expectativas. El servicio que me brindaron para el cumpleaños de mi hijo
+									fue magnifico. Todos los niños quedaron contentos. Los recomendaré.</p>
+							</div>
+							<div class="carousel-item text-center">
+								<div class="img-box m-auto">
+									<img class="d-block w-100 rounded-circle" src="images/cliente3.jpg">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Daniel López</strong></h5>
+								<h6 class="text-dark m-0">Estudiante</h6>
+								<p class="m-0 pt-3">Me encantá visitar este lugar con mis amigos, pasamos un rato agradable y las
+									comidas son muy deliciosas.</p>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+							<i class="fa fa-angle-left" aria-hidden="true"></i>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Customer Reviews -->
+
+	<!-- Start Contact info -->
+	<div class="contact-imfo-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 arrow-right">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>Teléfono</h4>
+						<p class="lead">
+							2810001
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 arrow-right">
+					<i class="fa fa-envelope"></i>
+					<div class="overflow-hidden">
+						<h4>Email</h4>
+						<p class="lead">
+							restaurante@gmail.com
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-map-marker"></i>
+					<div class="overflow-hidden">
+						<h4>Dirección</h4>
+						<p class="lead">
+							calle 34 # 12 - 6, Bogotá, Colombia
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contact info -->
+
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>Navega</h3>
+					<p><span class="text-color"><a href="index.html">Inicio</a></span> </p>
+					<p><span class="text-color"><a href="menu.html">Menú</a></span> </p>
+					<p><span class="text-color"><a href="blog.html">Servicios</a></span> </p>
+					<p><span class="text-color"><a href="blog-details.html">Nuestro Blog</a></span> </p>
+					<p><span class="text-color"><a href="about.html">Quienes somos</a></span> </p>
+					<p><span class="text-color"><a href="reservation.html">Contáctanos</a></span> </p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Suscribete</h3>
+					<div class="subscribe_form">
+						<form class="subscribe_form">
+							<input name="EMAIL" id="subs-email" class="form_input" placeholder="Dirección de Email" type="email">
+							<button type="submit" class="submit">SUSCRIBIRSE</button>
+							<div class="clearfix"></div>
+						</form>
+					</div>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Información de contacto</h3>
+					<p class="lead">calle 34 # 12 - 6, Bogotá, Colombia</p>
+					<p class="lead"><a href="#">2810001</a></p>
+					<p><a href="#"> restaurante@gmail.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Horarios de atención</h3>
+					<p><span class="text-color">Lunes: </span> 04:00 PMm - 12:00 AM</p>
+					<p><span class="text-color">Martes :</span> Cerrado</p>
+					<p><span class="text-color">Miércoles - Viernes :</span> 04:00 PM - 02:00 AM</p>
+					<p><span class="text-color">Sábado - Domingo :</span> 04:00 PM - 02:00 AM</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="company-name">Todos los derechos reservados. &copy; 2021 <a href="#">Restaurante</a> Desarrollado
+							por :
+							<a href=#>html Juventic</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<!-- End Footer -->
+
+	<div id="modal">
+		<div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header" id="modal-header">
+					</div>
+					<div class="modal-body">
+						<div class="description">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dicta,
+								blanditiis ducimus voluptatem, molestiae tenetur facilis veritatis,
+								libero et expedita dolores tempora consectetur earum temporibus tempore!
+								Sequi aperiam alias quam!</p>
+						</div>
+						<div class="btn-carrito">
+							<button class="btn btn-info btn-sm" id="btn-aumentar">+</button>
+							<input type="number" class="form-control cantidad" id="cantidad" value="1">
+							<button class="btn btn-danger btn-sm" id="btn-disminuir">-</button>
+						</div>
+					</div>
+					<div class="modal-footer" id="modal-footer">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o"
+			aria-hidden="true"></i></a>
+
+	<a href="carrito.html" class="back-to-top2">
+		<i class="fa fa-cart-arrow-down">
+			<span class="number-cart" id="number-cart">0</span>
+			</i>
+	</a>
+
+	<!-- 	<a href="carrito.html" id="back-to-top" title="Back to top" class="nav-item logo">
+					<img src="images/shopping-cart_icon-icons.com_72552.svg" alt="">
+					<span class="number-cart" id="number-cart">0</span>
+	</a> -->
+
+	<!-- ALL JS FILES -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/carrito.js"></script>
+	<!-- ALL PLUGINS -->
+	<script src="js/jquery.superslides.min.js"></script>
+	<script src="js/images-loded.min.js"></script>
+	<script src="js/isotope.min.js"></script>
+	<script src="js/baguetteBox.min.js"></script>
+	<script src="js/form-validator.min.js"></script>
+	<script src="js/contact-form-script.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
