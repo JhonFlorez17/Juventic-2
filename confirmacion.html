@@ -74,11 +74,11 @@
 
       //funciton para enviar correo 
       function sendMail(params) {
-        let correoRestaurante = "jpeduardo_30@hotmail.com";
-
+        
         var tempParams = {
           from_name: nombreCliente,
           to_name: nombreCliente,
+          to_email: correoCliente,
           message:
             "evento:" +
             evento +
@@ -103,7 +103,6 @@
           .then(function (res) {
             alert("reserva realizada");
             localStorage.clear();
-
             window.location.replace("index.html");
           });
       }
