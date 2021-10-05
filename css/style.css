@@ -1576,7 +1576,7 @@ blockquote {
 
 #back-to-top {
   position: fixed;
-  bottom: 90px;
+  bottom: 100px;
   right: 40px;
   z-index: 9999;
   width: 52px;
@@ -1595,40 +1595,44 @@ blockquote {
 
 .back-to-top2 {
   position: fixed;
-  bottom: 30px;
-  right: 25px;
+  bottom: 29px;
+  right: 40px;
   z-index: 9999;
-  width: 90px;
+  width: 50px;
   height: 50px;
   text-align: center;
+  padding: 1px;
   line-height: 40px;
   background: #d65106;
   color: #ffffff;
   cursor: pointer;
   border: 0;
-  border-radius: 40%;
+  border-radius: 53%;
+  box-shadow: 3px 2px 2px #000;
   text-decoration: none;
   transition: opacity 0.2s ease-out;
   font-size: 30px;
 }
 
-.back-to-top2 i{
+.back-to-top2 i {
   padding: 10px;
 }
 
-.back-to-top2 i:hover{
+.back-to-top2 i:hover {
   color: black;
 }
 
 .number-cart {
- /*  position: relative;
-  right: 50px;
-  top: 10px; */
-  background: black;
-  border-radius: 50%;
+  background: #f5b20b;
   color: white;
-  padding-left: 2px;
-  padding-right: 3px;
+  position: absolute;
+  height: 30px;
+  top: -15px;
+  border-radius: 50%;
+  color: black;
+  font-family: revert;
+  width: 30px;
+  text-align: center;
 }
 
 .number-cart.carrito {
@@ -1636,13 +1640,12 @@ blockquote {
   color: black;
 }
 
-.btn-pedido{
+.btn-pedido {
   border: none;
 }
 
-.btn-pedido:hover{
-  background:#d65106;
+.btn-pedido:hover {
+  background: #d65106;
   color: white;
   border-radius: 3px;
 }
-
