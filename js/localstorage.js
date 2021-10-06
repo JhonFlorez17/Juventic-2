@@ -7,10 +7,7 @@ const footer = document.getElementById("footer");
 const items = document.getElementById("items");
 let carrito_render = {};
 
-document.addEventListener("DOMContentLoaded", (e) => {
-  render_carrito();
-  total_carrito();
-});
+render_carrito();
 
 function render_carrito() {
   items.innerHTML = "";
@@ -19,10 +16,15 @@ function render_carrito() {
   Object.values(carrito_render).forEach((producto) => {
     templateCarrito.querySelector("th").textContent = producto.id;
     templateCarrito.querySelectorAll("td")[0].textContent = producto.title;
-    templateCarrito.querySelectorAll("span")[0].textContent = producto.precio;
-    templateCarrito.querySelectorAll("td")[2].textContent = producto.cantidad;
-    templateCarrito.querySelectorAll("span")[1].textContent =
+    templateCarrito.querySelector("td strong").textContent = producto.precio;
+    templateCarrito
+      .querySelector("td input[id='cantidadTabla']")
+      .setAttribute("value", producto.cantidad);
+    templateCarrito.querySelector("td span").textContent =
       producto.precio * producto.cantidad;
+    templateCarrito
+      .querySelector("td input[id='cantidadTabla']")
+      .setAttribute("data-id", producto.id);
 
     templateCarrito.querySelector(".btn-eliminar").dataset.id = producto.id;
     templateCarrito
@@ -40,25 +42,19 @@ function elimar_produ(id) {
   delete carrito_render[id];
   localStorage.setItem("carrito", JSON.stringify(carrito_render));
   render_carrito();
-  total_carrito();
-}
-
-function total_carrito() {
-  const number_actual = Object.keys(carrito_render).length;
-  number_carrito.textContent = number_actual;
 }
 
 function render_footer() {
   footer.innerHTML = "";
   if (Object.keys(carrito_render).length === 0) {
     footer.innerHTML = `
-        <th scope="row" colspan="5">Carrito vacío</th>
-        `;
+    <th scope="row" colspan="5">Carrito vacío</th>
+    `;
     return;
   }
 
   const nCantidad = Object.values(carrito_render).reduce(
-    (acc, { cantidad }) => acc + cantidad,
+    (acc, { cantidad }) => parseInt(acc) + parseInt(cantidad),
     0
   );
   const nPrecio = Object.values(carrito_render).reduce(
@@ -72,6 +68,11 @@ function render_footer() {
   const clone = templateFooter.cloneNode(true);
   fragment.appendChild(clone);
   footer.appendChild(fragment);
-
-
 }
+
+$(".table").on("change", ".cantidadTabla", function (e) {
+  const id_update = e.currentTarget.dataset.id;
+  carrito_render[id_update].cantidad = e.currentTarget.value;
+  localStorage.setItem("carrito", JSON.stringify(carrito_render));
+  render_carrito();
+});

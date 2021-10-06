@@ -7,6 +7,8 @@ const div_modal_buttom = document.getElementById("modal-footer");
 const template = document.getElementById("template-card").content;
 const fragment = document.createDocumentFragment();
 const cards = document.getElementById("productos");
+const img_id = document.getElementById("img-modal");
+const cantidad_modal = document.getElementById("cantidad");
 const number_carrito = document.getElementById("number-cart");
 
 let carrito = {};
@@ -131,8 +133,16 @@ for (let i = 0; i < btn_nom_modal.length; i++) {
     const Html2 = `<button type="button" data-id="${i}" id="btn_enviarcar" onclick="addcarrito(${i},cat_act());" class="btn btn-secondary modalb" 
      data-bs-dismiss="modal">Enviar Al Carrito</button>`;
 
+    const Html3 = `
+    	<img src="${articulos[i].imagen}" class="logoCarritomodal" alt="" srcset="">
+    `;
+
     div_modal.innerHTML = Html;
     div_modal_buttom.innerHTML = Html2;
+    img_id.innerHTML = Html3;
+
+    cantidad_input_modal(i);
+
     this.setAttribute("data-bs-toggle", "modal");
     this.click();
   });
@@ -159,10 +169,6 @@ btn_disminuir.addEventListener("click", () => {
 });
 /* ----------------------------- */
 
-/* Reiniciar Input modal  */
-$("#reg-modal").on("hidden.bs.modal", function () {
-  $("#cantidad").val(1);
-});
 /* --------------------- */
 
 /* Añadir al carrito */
@@ -181,7 +187,6 @@ function addcarrito(id, cantidad) {
 }
 /* --------------- */
 
-
 /* $("#cantidad").change(function () {
   var_cant_ultima = $("#cantidad").val();
   console.log(var_cant_ultima);
@@ -199,3 +204,13 @@ function total_carrito() {
   number_carrito.textContent = number_actual;
 }
 /* -------------- */
+
+/* Funcion Cantidad input modal cantidad */
+
+function cantidad_input_modal(num) {
+  if (carrito[num]) {
+    $("#cantidad").val(carrito[num].cantidad);
+  } else {
+    $("#cantidad").val(1);
+  }
+}

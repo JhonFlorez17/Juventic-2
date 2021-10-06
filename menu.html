@@ -27,6 +27,7 @@
 	<!-- Site CSS -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/stylemenu.css">
+	<link rel="stylesheet" href="css/modalcart.css">
 	<!-- Responsive CSS -->
 	<link rel="stylesheet" href="css/responsive.css">
 	<!-- Custom CSS -->
@@ -973,6 +974,7 @@
 	</footer>
 	<!-- End Footer -->
 
+	<!-- Modal -->
 	<div id="modal">
 		<div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
@@ -980,16 +982,18 @@
 					<div class="modal-header" id="modal-header">
 					</div>
 					<div class="modal-body">
-						<div class="description">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dicta,
-								blanditiis ducimus voluptatem, molestiae tenetur facilis veritatis,
-								libero et expedita dolores tempora consectetur earum temporibus tempore!
-								Sequi aperiam alias quam!</p>
+						<div class="descripcion">
+							<p>Lorem ipsum dolor sit amet,Lorem ipsum dolor sit ametLorem ipsum dolor sit ame Lorem ipsum dolor sit
+								amelorem asdnuasdt</p>
 						</div>
+						<div class="description" id="img-modal">
+						</div>
+						<hr>
+						<span class="cantidadSpan">Cantidad</span>
 						<div class="btn-carrito">
-							<button class="btn btn-info btn-sm" id="btn-aumentar">+</button>
-							<input type="number" class="form-control cantidad" id="cantidad" value="1">
-							<button class="btn btn-danger btn-sm" id="btn-disminuir">-</button>
+							<button class="btn-disminuir" id="btn-disminuir">-</button>
+							<input type="number" class=" cantidad" id="cantidad" value="1" min="1">
+							<button class="btn-aumentar" id="btn-aumentar">+</button>
 						</div>
 					</div>
 					<div class="modal-footer" id="modal-footer">
@@ -998,6 +1002,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- End Modal -->
 
 
 	<a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o"

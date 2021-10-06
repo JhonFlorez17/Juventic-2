@@ -24,6 +24,7 @@
   <!-- Site CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/stylemenu.css">
+  <link rel="stylesheet" href="css/modalcart.css">
   <!-- Responsive CSS -->
   <link rel="stylesheet" href="css/responsive.css">
   <!-- Custom CSS -->
@@ -78,25 +79,34 @@
   <!-- Start Contact -->
   <div class="contact-box">
     <div class="container">
-      <h4>Carrito de compras</h4>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Item</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Total</th>
-            <th scope="col">Accion</th>
-          </tr>
-        </thead>
-        <tbody id="items"></tbody>
-        <tfoot>
-          <tr id="footer">
-            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-          </tr>
-        </tfoot>
-      </table>
+      <div class="row inner-menu-box">
+        <h4 id="title-table">Carrito de compras</h4>
+        <div class="table-responsive" style="padding: 1em; margin-bottom: 2em;">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Total</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+              <tr id="footer">
+                <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="botonesTabla">
+          <button type="button" class="vaciarCarrito" id="vaciar-Carrito">Vaciar Carrito </button>
+          <a href="menu.html" class="seguirComprando">Seguir Comprando</a>
+          <a href="compra.html" class="comprar">Comprar</a>
+        </div>
+      </div>
     </div>
   </div>
   <!-- End Contact -->
@@ -105,9 +115,10 @@
     <tr>
       <th scope="row">id</th>
       <td>Café</td>
-      <td>$ <span>500</span></td>
-      <td>1</td>
-      <td>$ <span>500</span></td>
+      <td>$ <strong></strong></td>
+      <td style="width: 200px;"><input type="number" id="cantidadTabla" name="cantidadTabla" class="cantidadTabla"
+          min="1" /></td>
+      <td>$ <span></span></td>
       <td>
         <button href="" class="btn-eliminar" id="btn-eliminar">
           <img src="./images/eliminar.svg" class="eliminar-table" alt="Eliminar">
@@ -119,11 +130,8 @@
   <template id="template-footer">
     <th scope="row" colspan="2">Total productos</th>
     <td></td>
-    <td>10</td>
+    <td style="padding-left: 35px;">10</td>
     <td class="font-weight-bold">$ <span>5000</span></td>
-    <td> <button class="btn-pedido">
-        Realizar Pedido
-      </button> </td>
   </template>
 
 
@@ -242,19 +250,6 @@
   <script src="js/localstorage.js"></script>
   <script src="js/form-validator.min.js"></script>
   <script src="js/custom.js"></script>
-  <script>
-    $('.map-full').mapify({
-      points: [
-        {
-          lat: 40.7143528,
-          lng: -74.0059731,
-          marker: true,
-          title: 'Marker title',
-          infoWindow: 'Live Dinner Restaurant'
-        }
-      ]
-    });
-  </script>
 </body>
 
 </html>
