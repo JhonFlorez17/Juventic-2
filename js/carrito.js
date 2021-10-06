@@ -183,6 +183,7 @@ function addcarrito(id, cantidad) {
   carrito[producto.id] = { ...producto };
   console.log(carrito);
   localStorage.setItem("carrito", JSON.stringify(carrito));
+  notification();
   total_carrito();
 }
 /* --------------- */
@@ -213,4 +214,9 @@ function cantidad_input_modal(num) {
   } else {
     $("#cantidad").val(1);
   }
+}
+
+function notification() {
+  alertify.set("notifier", "position", "bottom-left");
+  alertify.success("Se agrego Con exito al carrito");
 }

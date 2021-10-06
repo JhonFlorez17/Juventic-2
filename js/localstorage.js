@@ -41,6 +41,7 @@ function render_carrito() {
 function elimar_produ(id) {
   delete carrito_render[id];
   localStorage.setItem("carrito", JSON.stringify(carrito_render));
+  notification_eliminar();
   render_carrito();
 }
 
@@ -74,5 +75,16 @@ $(".table").on("change", ".cantidadTabla", function (e) {
   const id_update = e.currentTarget.dataset.id;
   carrito_render[id_update].cantidad = e.currentTarget.value;
   localStorage.setItem("carrito", JSON.stringify(carrito_render));
+  notification_update();
   render_carrito();
 });
+
+function notification_eliminar() {
+  alertify.set("notifier", "position", "bottom-right");
+  alertify.error("Se Elimino producto del carrito");
+}
+
+function notification_update() {
+  alertify.set("notifier", "position", "bottom-right");
+  alertify.success("Se Actualizo Cantidad Con exito");
+}

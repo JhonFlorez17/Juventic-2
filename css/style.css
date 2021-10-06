@@ -460,10 +460,12 @@ button:focus {
 }
 .inner-menu-box .nav-pills .nav-link.active {
   background: #d65106;
+  color: white;
 }
 
 .inner-menu-box .nav-pills .nav-link {
   font-size: 18px;
+  color: black;
 }
 .inner-menu-box .nav-pills .nav-link:hover {
   background: #d65106;
