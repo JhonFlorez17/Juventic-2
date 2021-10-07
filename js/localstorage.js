@@ -8,7 +8,6 @@ const items = document.getElementById("items");
 let carrito_render = {};
 
 render_carrito();
-
 function render_carrito() {
   items.innerHTML = "";
   carrito_render = JSON.parse(localStorage.getItem("carrito"));

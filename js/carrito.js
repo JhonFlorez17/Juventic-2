@@ -115,7 +115,7 @@ const articulos = [
 const bebidas = [
   {
     id: 12,
-    nommbre_modal: "Standard black coffee",
+    nommbre_modal: "Standard black ",
     descripcion: "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
     precio: 12000,
     imagen: "images2/menu-beverage.jpg",
@@ -129,14 +129,14 @@ const bebidas = [
   },
   {
     id: 14,
-    nommbre_modal: "Standard black coffee",
+    nommbre_modal: "Standard white coffee",
     descripcion: "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
     precio: 4000,
     imagen: "images2/menu-beverage.jpg",
   },
   {
     id: 15,
-    nommbre_modal: "Standard black coffee",
+    nommbre_modal: "Standard white",
     descripcion: "Lorem ipsum dolor sit amet elit. Phasel nec preti facil",
     precio: 9000,
     imagen: "images2/menu-beverage.jpg",
