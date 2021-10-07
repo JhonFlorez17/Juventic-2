@@ -289,3 +289,5 @@ function notification() {
   alertify.set("notifier", "position", "bottom-left");
   alertify.success("Se agrego Con exito al carrito");
 }
+
+// GUARDAR LS TABLA DE PEDIDO

@@ -1,6 +1,5 @@
 $(document).ready(function () {
-  $("#datepicker_llegada").datepicker();
-  $("#datepicker_salida").datepicker();
+  
 
   $("#formulario").on("submit", function (event) {
     event.preventDefault();
