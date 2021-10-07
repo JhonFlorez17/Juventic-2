@@ -47,7 +47,8 @@
     let correoCliente = localStorage.getItem("correoCliente");
 
     const carrito = JSON.parse(localStorage.getItem("carrito"));
-
+    const compra = [];
+    
     (function () {
       emailjs.init("user_SLROp8OMOhXacRTRrx5KS");
     })();
@@ -56,30 +57,32 @@
 
       $("#datos").append("<td>" + nombreCliente + "</td>");
       $("#datos").append("<td>" + correoCliente + "</td>");
-
+     
       Object.values(carrito).forEach((producto) => {
+
         let total = parseInt(producto.precio) * parseInt(producto.cantidad);
+       compra.push(producto.title)
+       compra.push(producto.precio)
+       compra.push("/")
         $("#datosproductos").append("<tr> <td>" + producto.title + "</td> <td>" + producto.precio + "</td> <td>" + producto.cantidad + "</td> <td>" + total + " </td> </tr>");
       })
 
 
       $("#btn-reserva").click(function () {
+        //alert(compra);
         sendMail();
       });
     });
 
     //funciton para enviar correo 
-    function sendMail(params) {
-
-
-
+    function sendMail() {
       var tempParams = {
         from_name: nombreCliente,
         to_name: nombreCliente,
         to_email: correoCliente,
         message:
           "Nombre:" +
-          nombreCliente + "Carrito"
+          nombreCliente + " Carrito: " + compra
       };
 
       emailjs
